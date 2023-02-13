@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.homepage {
+  background: linear-gradient(blue, pink);
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.block-top {
+  display: flex;
+  justify-content: center;
+}
+
+.block-pourcent {
+  margin-right: 50px;
+  padding: 10px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(10, 10, 116);
+  opacity: 0.9;
+  border-radius: 10px;
+  width: 120px;
+}
+
+.subtitle h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 10px;
+  color: white;
+}
+
+.block-value {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.block-value .value {
+  color: blueviolet;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.block-value .pourcent {
+  color: greenyellow;
+  display: flex;
+  align-items: center;
+}
+.block-value .pourcent::before {
+  content: "▲";
+  margin-right: 10px;
+}/*# sourceMappingURL=style.css.map */
