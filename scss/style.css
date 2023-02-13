@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .homepage {
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(pink));
   background: linear-gradient(blue, pink);
   height: 100vh;
 }
@@ -9,17 +10,26 @@
 }
 
 .block-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .block-pourcent {
   margin-right: 50px;
   padding: 10px 10px 30px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  background: rgb(10, 10, 116);
-  opacity: 0.9;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #0a0a74;
+  opacity: .9;
   border-radius: 10px;
   width: 120px;
 }
@@ -32,21 +42,72 @@
 }
 
 .block-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .block-value .value {
   color: blueviolet;
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .block-value .pourcent {
   color: greenyellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .block-value .pourcent::before {
   content: "▲";
   margin-right: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.block-middle .onglets {
+  width: 180px;
+}
+
+.block-middle .onglets .onglet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  color: lightgrey;
+  background: grey;
+  border-radius: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+  padding-left: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-middle .onglets .onglet .collection {
+  margin-right: 10px;
+  border-radius: 50px;
+  background-color: grey;
+}
+
+.block-middle .onglets .onglet .collection.active {
+  background: #0a0a74;
+  padding: 10px;
+}
+
+.block-middle .onglets .onglet a {
+  color: lightgray;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
