@@ -117,15 +117,48 @@ body
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-weight: bold;
 }
 
-.block-middle .onglets.-graph .-trading {
+.block-middle .onglets.-trading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.block-middle .onglets.-graph .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+  padding-right: 15px;
+}
+
+.block-middle .onglets.-graph .day .collection {
+  position: relative;
+}
+
+.block-middle .onglets.-graph .day .collection::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  left: 60px;
+  background: #27479a;
+}
+
+.block-middle .onglets.-graph .day .collection:first-child::after {
+  content: none;
+}
+
+.block-middle .onglets.-graph .day .collection:last-child::after {
+  content: none;
 }
 
 .block-middle .onglets.-graph .devise .collection {

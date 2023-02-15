@@ -1,9 +1,23 @@
+body
 .homepage {
-    background: linear-gradient(blue, pink);
+    background: linear-gradient(rgb(18, 96, 254), rgb(150, 53, 166));
     height: 100vh;
 }
-.title {
+.mytitle {
     text-align: center;
+    border: 5px solid black;
+    border-radius: 20px;
+    border-left: none;
+    border-right: none;
+    width: fit-content;
+    margin: 0 auto 20px;
+    h1 {
+        background: linear-gradient(20deg,rgb(15, 17, 138), rgb(101, 27, 116));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        margin: 10px 0;
+    }
 }
 .block-top {
     display: flex;
@@ -15,7 +29,7 @@
     padding: 10px 10px 30px 10px;
     display: flex;
     flex-direction: column;
-    background: rgb(10, 10, 116);
+    background: rgb(9, 43, 140);
     opacity: .9;
     border-radius: 10px;
     width: 120px;
@@ -49,5 +63,112 @@
             content: "▲";
             margin-right: 10px;
         }
+    }
+}
+
+.block-middle {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 80px auto 0;
+    .collections {
+        background: rgb(40, 42, 142);
+        border-radius: 10px;
+        padding: 10px 25px 25px;
+        margin-left: 50px;
+        height: 450px;
+        width: 20%;
+    }
+    .onglets {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        &.-trading {
+            display: flex;
+            justify-content: space-between;
+        }
+        &.-graph {
+            .day {
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
+                padding-right: 15px;
+                .collection {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 20px;
+                        width: 2px;
+                        left: 60px;
+                        background: rgb(39, 71, 154);
+                    }
+                    &:first-child::after {
+                        content: none;
+                      }
+                    &:last-child::after {
+                    content: none;
+                    }
+                }
+            }
+            .devise {
+                .collection {
+                    width: 25px;
+                }
+            }
+        }
+        .onglet {
+            display: flex;
+            list-style: none;
+            background: rgb(28, 59, 142);
+            border-radius: 50px;
+            margin-left: 20px;
+            padding-left: 0;
+            align-items: center;
+            .collection {
+                margin-right: 10px;
+                border-radius: 50px;
+                font-size: 14px;
+                width: fit-content;
+                text-transform: capitalize;
+
+                &.active {
+                    background: rgb(0, 32, 115);
+                    padding: 10px 15px;
+                } 
+                
+            }
+            a {
+                color:rgb(119, 166, 244);
+                text-decoration: none;
+            }
+        }
+    }
+    .collection-list {
+        list-style: decimal;
+        padding: 10px;
+        color: rgb(119, 166, 244);
+        .elem {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid rgb(28, 59, 142);
+        }
+    }
+
+    .graph {
+        width: 60%;
+        margin-left: 30px;
+        padding:10px 20px 20px;
+        border-radius: 10px;
+        background: rgb(40, 42, 142);
+    }
+    .trade {
+        width: 20%;
+        margin-left: 30px;
+        padding:10px 20px 20px;
+        border-radius: 10px;
+        background: rgb(40, 42, 142);
     }
 }
